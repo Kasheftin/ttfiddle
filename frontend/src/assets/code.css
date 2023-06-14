@@ -1,0 +1,10 @@
+.tt-code {
+  &__header {
+    @apply flex items-center pb-4 gap-4;
+    flex: 0 0 auto;
+  }
+  &__body {
+    @apply border-gray-500 border rounded p-1 overflow-auto;
+    flex: 1 1 auto;
+  }
+}

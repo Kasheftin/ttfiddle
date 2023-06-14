@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './wrapper.css';
+@import './code.css';
+@import './calendar.css';
+@import './scrollableGrid.css';
+@import './intro.css';
+
+html, body {
+  @apply overflow-hidden;
+}

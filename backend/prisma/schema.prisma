@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Fiddle {
+  id         String @id @db.VarChar(16)
+  token      String @db.VarChar(16)
+  version    Int
+  code       String @db.Text
+  createdAt Int @map("created_at")
+  updatedAt Int @map("updated_at")
+  @@map("fiddles")
+}

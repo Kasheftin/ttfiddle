@@ -1,0 +1,54 @@
+.tt-intro {
+  &__wrapper {
+    @apply flex items-center justify-center h-full;
+  }
+  &__container {
+    @apply flex-1 flex gap-12 max-w-3xl;
+  }
+  &__col {
+    @apply flex-1;
+  }
+  &__logo {
+    @apply flex flex-col bg-sky-600 rounded-xl p-8 text-white font-mono items-center gap-3 text-3xl font-bold;
+  }
+  &__logo-small {
+    @apply flex items-center justify-center bg-sky-600 rounded text-white h-9 px-2 font-mono font-bold;
+  }
+}
+
+.tt-intro-card {
+  @apply my-10 flex flex-col gap-3;
+  &__title {
+    @apply block text-xl font-bold hover:underline mb-1;
+  }
+  &__description {
+    @apply text-gray-600;
+  }
+  &__action {
+    @apply text-blue-600 font-bold hover:underline;
+  }
+}
+
+.tt-intro-list {
+  @apply mb-10;
+  &__title {
+    @apply text-xl font-bold mb-3;
+  }
+  &__content {
+    @apply overflow-auto;
+    max-height: 400px;
+  }
+}
+
+.tt-intro-entry {
+  @apply flex items-center bg-sky-100 mb-3 rounded-xl p-3;
+  &__content {
+    @apply flex-1;
+  }
+  &__title {
+    @apply font-bold;
+  }
+  &__updated {
+    @apply text-gray-600;
+  }
+}

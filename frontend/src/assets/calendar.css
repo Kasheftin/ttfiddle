@@ -1,0 +1,97 @@
+.tt-calendar {
+  &__container {
+    @apply flex flex-col rounded border-gray-200 border w-full h-full bg-slate-200;
+  }
+  &__head {
+    @apply bg-gray-100 border-b border-gray-200 px-4 py-3 flex items-center gap-3;
+  }
+  &__title {
+    @apply text-xl;
+  }
+  &__date-range {
+    @apply text-sm font-bold;
+  }
+  &__body {
+    @apply relative flex-1;
+  }
+}
+
+.tt-calendar-side {
+  @apply flex flex-col h-full;
+}
+
+.tt-calendar-head {
+  @apply flex min-w-[var(--width)];
+}
+
+.tt-calendar-row {
+  @apply min-h-[var(--height)] flex-1 flex relative z-20;
+  &__time-label {
+    @apply w-full h-full flex items-center justify-end mr-3 text-sm text-gray-400;
+    transform: translateY(-50%);
+    &--hour {
+      @apply text-gray-600;
+    }
+  }
+  &--bordered {
+    @apply border-t border-slate-300;
+  }
+  &--hour-bordered {
+    @apply border-slate-400;
+  }
+}
+
+.tt-calendar-colgroup {
+  @apply relative min-w-[var(--width)] flex-1 flex flex-col text-sm;
+  &__label {
+    @apply py-1 flex items-center justify-center whitespace-nowrap overflow-hidden text-ellipsis;
+  }
+  &__cols {
+    @apply flex items-center;
+  }
+  &__timeblock-cols {
+    @apply flex-1 flex;
+  }
+  &__timeblock-cols {
+
+  }
+  &--light {
+    @apply bg-slate-100;
+  }
+}
+
+.tt-calendar-col {
+  @apply relative min-w-[var(--width)] flex-1 overflow-hidden text-sm;
+  &__label {
+    @apply py-1 text-center whitespace-nowrap overflow-hidden text-ellipsis;
+  }
+}
+
+.tt-calendar-body {
+  @apply relative flex flex-col min-w-[var(--width)] flex-1;
+  &__columns {
+    @apply absolute top-0 right-0 bottom-0 left-0 flex items-stretch z-30;
+    &--bg {
+      @apply z-10;
+    }
+  }
+}
+
+.tt-calendar-timeblocks {
+  @apply absolute top-0 left-0;
+}
+
+.tt-calendar-timeblock {
+  @apply absolute flex flex-col gap-2 items-center justify-center p-2;
+  &__rect {
+    @apply absolute top-1 right-1 bottom-1 left-1 bg-slate-400 rounded shadow;
+    background-color: var(--color, theme('colors.slate.400'))
+  }
+  &__content {
+    @apply relative font-bold text-white text-sm text-center;
+    text-shadow: 2px 2px 2px #00000055;
+    &--main {
+      @apply text-base;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.tt-wrapper {
+  @apply absolute top-0 right-0 bottom-0 left-0 w-full h-full flex-1 flex items-stretch overflow-hidden;
+  &__col {
+    &--code {
+      @apply bg-slate-800 py-6 px-4 flex flex-col overflow-hidden;
+      flex: 0 0 var(--width);
+    }
+    &--calendar {
+      @apply flex-1 p-6 flex flex-col overflow-hidden;
+    }
+  }
+  &__separator {
+    @apply absolute top-0 bottom-0 left-[var(--left)] cursor-w-resize w-4 -translate-x-2;
+  }
+}
+
+.tt-error-page {
+  @apply w-full h-full flex flex-col items-center justify-center gap-6;
+  &__status {
+    @apply text-8xl;
+  }
+  &__message {
+    @apply text-2xl text-gray-400;
+  }
+}
